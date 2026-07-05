@@ -6,15 +6,6 @@ import org.junit.Test
 
 class ProductListTest {
 
-    data class Product(
-        val id: Int,
-        val name: String,
-        val description: String,
-        val price: Double,
-        val currency: String,
-        val in_stock: Boolean
-    )
-
     private fun getProductsToDisplay(products: List<Product>): List<String> {
         return products.map { "${it.name} - ${it.currency} ${it.price}" }
     }
